@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-	   any
-    }
+    agent any
 	 environment{
         source_dir = "/var/jenkins_home/workspace/simple-java-maven-app/"
 	   }

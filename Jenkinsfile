@@ -14,9 +14,9 @@ pipeline {
 				export MAVEN_HOME="/home/ubuntu/jenkins_home/install/apache-maven-3.8.1"
 				export PATH="$MAVEN_HOME/bin:$PATH"
 			   '''
-			echo 'JAVA_HOME: $JAVA_HOME'
-			echo 'MAVEN_HOME: $MAVEN_HOME'
-			ss '''
+			echo 'JAVA_HOME:' $JAVA_HOME
+			echo 'MAVEN_HOME:' $MAVEN_HOME
+			sh '''
 				java -version
 				mvn -v
 			   '''

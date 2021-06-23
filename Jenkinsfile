@@ -34,7 +34,7 @@ pipeline {
                // sh './jenkins/scripts/deliver.sh' 
 		  sh  'scp -vvv  /var/jenkins_home/workspace/simple-java-maven-app/target/my-app-1.0-SNAPSHOT.jar songchao@47.106.186.226:~/'
                   sh  '''
-                      ssh songchao@47.106.186.226 'cd  && touch t123'
+                      ssh songchao@47.106.186.226 'cd  && touch t1234'
 		      '''
             }
         }

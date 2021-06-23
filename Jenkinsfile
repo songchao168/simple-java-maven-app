@@ -7,6 +7,7 @@ pipeline {
 	    stage ('Build'){
 			steps {
 			echo '配置环境变量'
+			echo "workspace: ${WORKSPACE}"
 			sh '''
 				export JAVA_HOME="/usr/lib/java/jdk1.8.0_202/"
 				export PATH="$JAVA_HOME/bin:$PATH"
@@ -16,6 +17,7 @@ pipeline {
 				echo "MAVEN_HOME: $MAVEN_HOME"
 				echo "login user is"
 				whoami
+				
 				cd ${source_dir}
                 mvn -B -DskipTests clean package
 				

@@ -31,7 +31,7 @@ pipeline {
                
 		  sh  'scp -vvv -i /var/jenkins_home/.ssh/wgs_rsa  ${source_dir}/target/my-app-1.0-SNAPSHOT.jar songchao@47.106.186.226:~/'
                   sh  '''
-                      ssh -i /var/jenkins_home/.ssh/wgs_rsa  songchao@47.106.186.226 'cd  && touch t1234'
+                      ssh -vvv -i /var/jenkins_home/.ssh/wgs_rsa  songchao@47.106.186.226 'cd  && touch t1234'
 		           '''
             }
         }

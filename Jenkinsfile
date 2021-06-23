@@ -1,7 +1,7 @@
 pipeline {
     agent any
 	 environment{
-        source_dir = "/var/jenkins_home/workspace/simple-java-maven-app/"
+        source_dir = "/var/jenkins_home/workspace/songchaoTestPipline"
 	   }
     stages {
 	    stage ('Build'){

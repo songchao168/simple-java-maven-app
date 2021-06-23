@@ -1,15 +1,10 @@
 pipeline {
     agent {
-       // docker {
-       //     image 'maven:3.8.1-jdk-8' 
-       //     args '-v /root/.m2:/root/.m2 -v /root/.ssh:/root/.ssh' 
-           
-       // }
 	   any
-	   environment{
+    }
+	 environment{
         source_dir = "/var/jenkins_home/workspace/simple-java-maven-app/"
 	   }
-    }
     stages {
 	    stage ('Config'){
 			steps {

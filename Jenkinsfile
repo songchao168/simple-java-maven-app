@@ -14,7 +14,8 @@ pipeline {
 				export PATH="$MAVEN_HOME/bin:$PATH"
 				echo "JAVA_HOME: $JAVA_HOME"
 				echo "MAVEN_HOME: $MAVEN_HOME"
-				
+				echo "login user is"
+				whoami
 				cd ${source_dir}
                 mvn -B -DskipTests clean package
 				
